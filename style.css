@@ -33,6 +33,7 @@ nav a {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 button {
@@ -46,6 +47,7 @@ button {
   width: 200px;
   border-radius: 10px;
   display: block;
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
 }
+
 
