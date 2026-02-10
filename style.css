@@ -98,7 +98,29 @@ h1 {
     padding: 10px;
     font-size: 15px;
   }
+.contact-box {
+  max-width: 500px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #1e90ff, #00c6ff);
+  padding: 25px;
+  border-radius: 16px;
+  color: white;
+  text-align: center;
 }
+
+.contact-box img {
+  width: 120px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.contact-box button {
+  margin-top: 10px;
+  background: #fff;
+  color: #1e90ff;
+  font-weight: bold;
+}
+
 
 
 
