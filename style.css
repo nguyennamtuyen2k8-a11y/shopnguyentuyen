@@ -59,6 +59,47 @@ button {
 h1 {
   text-align: center;
 }
+/* ====== RESPONSIVE CHO ĐIỆN THOẠI ====== */
+@media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 6px 10px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .products {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .product {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .product img {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
 
 
 
