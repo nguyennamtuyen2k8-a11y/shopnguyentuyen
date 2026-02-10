@@ -1,6 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
   background: #f5f5f5;
 }
 
@@ -53,7 +52,14 @@ button {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 30px auto;
 }
+h1 {
+  text-align: center;
+}
+
 
 
 
