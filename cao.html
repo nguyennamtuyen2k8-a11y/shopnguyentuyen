@@ -144,6 +144,23 @@ function closeTetPopup() {
   document.getElementById("tetPopup").style.display = "none";
 }
 </script>
+<!-- 🌸🧧 HIỆU ỨNG TẾT – HOA ĐÀO & LÌ XÌ RƠI (ACC GIÁ CAO) -->
+<script>
+const icons = ["🌸", "🧧", "🧧"]; // giá cao cho lì xì nhiều hơn
+
+for (let i = 0; i < 35; i++) {
+  let item = document.createElement("div");
+  item.className = "petal";
+  item.innerText = icons[Math.floor(Math.random() * icons.length)];
+
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.animationDuration = 6 + Math.random() * 6 + "s";
+  item.style.opacity = 0.95;
+  item.style.fontSize = 24 + Math.random() * 12 + "px";
+
+  document.body.appendChild(item);
+}
+</script>
 
 </body>
 </html>
