@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+<script>
+  if (window.location.pathname !== "/" && !window.location.pathname.endsWith("index.html")) {
+    window.location.href = "./index.html";
+  }
+</script>
 
 <nav>
   <a href="index.html">Mua Acc</a>
@@ -71,6 +77,7 @@ function closePopup() {
 
 </body>
 </html>
+
 
 
 
