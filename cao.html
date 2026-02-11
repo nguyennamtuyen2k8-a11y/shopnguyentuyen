@@ -18,38 +18,6 @@
 
 <h1>💎 Acc Blox Fruits giá cao</h1>
 
-<!-- ===== THÔNG BÁO KHUYẾN MÃI TẾT ===== -->
-<div class="tet-notice">
-  <h2>🎉 THÔNG BÁO KHUYẾN MÃI TẾT NGUYÊN ĐÁN 🎉</h2>
-
-  <p><b>🧧 Nhân dịp Tết Nguyên Đán</b>, shop xin gửi đến quý khách chương trình
-    <span class="highlight">GIẢM GIÁ ĐẶC BIỆT</span>:</p>
-
-  <hr>
-
-  <h3>🔥 ƯU ĐÃI TẾT 🔥</h3>
-  <ul>
-    <li>✅ Giảm giá các acc trong mục <b>ACC GIÁ CAO</b></li>
-    <li>✅ Acc đúng 100% như trong ảnh</li>
-    <li>✅ Nhiều đồ ngon – nhiều trái vĩnh viễn</li>
-    <li>✅ Hỗ trợ nhanh – giao dịch an toàn</li>
-  </ul>
-
-  <hr>
-
-  <p>⏰ <b>Thời gian áp dụng:</b></p>
-  <p>📅 <b>Từ 13/02 đến 23/02</b></p>
-
-  <p>📌 <b>Lưu ý:</b></p>
-  <ul>
-    <li>⚠️ Chỉ áp dụng cho mục <b>Acc Giá Cao</b></li>
-    <li>⚠️ Số lượng acc có hạn, hết là dừng</li>
-  </ul>
-
-  <p class="wish">🎊 Chúc quý khách năm mới <b>An Khang – Thịnh Vượng – Mua acc gặp hên!</b> 🎊</p>
-</div>
-<!-- ===== KẾT THÚC THÔNG BÁO ===== -->
-
 <div class="products">
 
   <div class="product">
@@ -141,6 +109,41 @@
   </div>
 
 </div>
+
+<!-- ===== POPUP KHUYẾN MÃI TẾT ===== -->
+<div class="popup-overlay" id="tetPopup">
+  <div class="popup-box">
+    <span class="popup-close" onclick="closeTetPopup()">×</span>
+
+    <h2>🎉 KHUYẾN MÃI TẾT NGUYÊN ĐÁN 🎉</h2>
+
+    <p><b>🧧 GIẢM GIÁ ĐẶC BIỆT ACC GIÁ CAO</b></p>
+
+    <ul>
+      <li>✅ Giảm giá các acc trong mục <b>ACC GIÁ CAO</b></li>
+      <li>✅ Acc đúng 100% như trong ảnh</li>
+      <li>✅ Nhiều đồ ngon – nhiều trái vĩnh viễn</li>
+      <li>✅ Hỗ trợ nhanh – giao dịch an toàn</li>
+    </ul>
+
+    <p><b>⏰ Thời gian áp dụng:</b></p>
+    <p>📅 Từ <b>13/02</b> đến <b>23/02</b></p>
+
+    <p><b>📌 Lưu ý:</b></p>
+    <ul>
+      <li>⚠️ Chỉ áp dụng cho mục Acc Giá Cao</li>
+      <li>⚠️ Số lượng có hạn, hết là dừng</li>
+    </ul>
+
+    <button onclick="closeTetPopup()">Tôi đã hiểu</button>
+  </div>
+</div>
+
+<script>
+function closeTetPopup() {
+  document.getElementById("tetPopup").style.display = "none";
+}
+</script>
 
 </body>
 </html>
