@@ -269,6 +269,24 @@ h1 {
     font-size: 22px;
   }
 }
+.petal {
+  position: fixed;
+  top: -40px;
+  width: 18px;
+  height: 18px;
+  background: pink;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  animation: fall linear infinite;
+  z-index: 999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
 
 
 
