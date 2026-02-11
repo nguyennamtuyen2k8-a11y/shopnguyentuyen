@@ -172,6 +172,23 @@
 </div>
 
 </div> <!-- đóng products -->
+<!-- 🌸🧧 HIỆU ỨNG TẾT – HOA ĐÀO & LÌ XÌ RƠI -->
+<script>
+const icons = ["🌸", "🧧"];
+
+for (let i = 0; i < 30; i++) {
+  let item = document.createElement("div");
+  item.className = "petal";
+  item.innerText = icons[Math.floor(Math.random() * icons.length)];
+
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.animationDuration = 6 + Math.random() * 6 + "s";
+  item.style.opacity = 0.9;
+  item.style.fontSize = 22 + Math.random() * 10 + "px";
+
+  document.body.appendChild(item);
+}
+</script>
 
 </body>
 </html>
