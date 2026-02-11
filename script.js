@@ -8,7 +8,8 @@ function dongThongBao() {
   document.getElementById("popupThongBao").style.display = "none";
 }
 <script>
-  window.location.href = "mua-acc.html";
+  window.location.href = "Mua-Acc.html";
 </script>
+
 
 
