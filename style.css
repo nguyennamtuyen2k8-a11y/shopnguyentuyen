@@ -197,6 +197,40 @@ h1 {
 .popup-close:hover {
   color: #e53935;
 }
+/* ===== POPUP RESPONSIVE CHO ĐIỆN THOẠI ===== */
+@media (max-width: 768px) {
+
+  .popup-box {
+    width: 90%;
+    max-width: 360px;
+    max-height: 85vh;
+    padding: 16px;
+    font-size: 14px;
+    overflow-y: auto;
+  }
+
+  .popup-box h2 {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .popup-box ul li {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .popup-box button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .popup-close {
+    font-size: 22px;
+    top: 8px;
+    right: 12px;
+  }
+}
+
 
 
 
