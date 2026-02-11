@@ -226,6 +226,53 @@ h1 {
     right: 10px;
   }
 }
+.tet-notice {
+  border: 2px solid #ff3b3b;
+  background: linear-gradient(135deg, #fff4e6, #ffe0e0);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.25);
+}
+
+.tet-notice h2 {
+  text-align: center;
+  color: #d40000;
+  margin-bottom: 10px;
+}
+
+.tet-notice h3 {
+  color: #ff6600;
+  margin-top: 10px;
+}
+
+.tet-notice ul {
+  padding-left: 20px;
+}
+
+.tet-notice li {
+  margin: 6px 0;
+}
+
+.tet-notice .highlight {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.tet-notice hr {
+  border: none;
+  border-top: 1px dashed #ff9999;
+  margin: 15px 0;
+}
+
+.tet-notice .wish {
+  text-align: center;
+  font-weight: bold;
+  color: #c40000;
+  margin-top: 15px;
+}
+
 
 
 
