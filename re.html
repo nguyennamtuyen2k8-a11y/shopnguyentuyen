@@ -21,11 +21,9 @@
 <div class="products">
 
   <div class="product">
-    <img src="images/re/re.png" alt="Acc giá rẻ">
+    <img src="images/re/re.png">
     <p>Giá: 30.000đ bank – 40.000đ card</p>
-    <a href="https://zalo.me/0352715663" target="_blank">
-      <button>Mua qua Zalo</button>
-    </a>
+    <a href="https://zalo.me/0352715663" target="_blank"><button>Mua qua Zalo</button></a>
   </div>
 
 <div class="product">
@@ -260,14 +258,25 @@
   </a>
 </div>
 
-<div class="product">
-  <img src="images/re/re35.png">
-  <p>Giá: 15.000đ bank – 20.000đ card</p>
-  <a href="https://zalo.me/0352715663" target="_blank">
-    <button>Mua qua Zalo</button>
-  </a>
-</div>
+ <div class="product">
+    <img src="images/re/re35.png">
+    <p>Giá: 15.000đ bank – 20.000đ card</p>
+    <a href="https://zalo.me/0352715663" target="_blank"><button>Mua qua Zalo</button></a>
+  </div>
+
+</div> <!-- ĐÓNG PRODUCTS -->
+
+<!-- 🌸 HIỆU ỨNG HOA ĐÀO RƠI -->
+<script>
+for (let i = 0; i < 25; i++) {
+  let petal = document.createElement("div");
+  petal.className = "petal";
+  petal.style.left = Math.random() * 100 + "vw";
+  petal.style.animationDuration = 5 + Math.random() * 5 + "s";
+  petal.style.opacity = Math.random();
+  document.body.appendChild(petal);
+}
+</script>
 
 </body>
 </html>
-
