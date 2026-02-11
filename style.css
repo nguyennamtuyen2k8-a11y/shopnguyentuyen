@@ -247,6 +247,14 @@ h1 {
 .popup-close:hover {
   color: red;
 }
+@media (max-width: 768px) {
+  .popup-close {
+    top: 8px;
+    right: 10px;
+    font-size: 22px;
+  }
+}
+
 
 
 
