@@ -271,14 +271,11 @@ h1 {
 }
 .petal {
   position: fixed;
-  top: -40px;
-  width: 18px;
-  height: 18px;
-  background: pink;
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(45deg);
+  top: -50px;
+  font-size: 26px;
+  pointer-events: none;
   animation: fall linear infinite;
-  z-index: 999;
+  z-index: 9999;
 }
 
 @keyframes fall {
@@ -286,6 +283,7 @@ h1 {
     transform: translateY(110vh) rotate(360deg);
   }
 }
+
 
 
 
