@@ -184,6 +184,20 @@ h1 {
   font-size: 16px;
   cursor: pointer;
 }
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  color: #e53935;
+}
+
 
 
 
