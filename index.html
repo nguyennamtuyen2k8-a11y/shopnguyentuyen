@@ -124,9 +124,37 @@ function closePopup() {
   if (popup) popup.style.display = "none";
 }
 </script>
+  
+<script>
+  const products = document.querySelectorAll('.product');
+  const popup = document.getElementById('imagePopup');
+  const popupImg = document.getElementById('popupImg');
+
+  products.forEach(product => {
+    const img = product.querySelector('img');
+
+    img.addEventListener('click', () => {
+      products.forEach(p => p.classList.remove('active'));
+      product.classList.add('active');
+
+      popup.style.display = 'flex';
+      popupImg.src = img.src;
+    });
+  });
+
+  function closePopup() {
+    popup.style.display = 'none';
+    products.forEach(p => p.classList.remove('active'));
+  }
+
+  popup.addEventListener('click', e => {
+    if (e.target === popup) closePopup();
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
