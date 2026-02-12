@@ -3,70 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop Acc Blox Fruits</title>
+  <title>Shop Acc Blox Fruits - Tuyên Nguyên</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+
+<!-- TỰ ĐỘNG VỀ INDEX -->
 <script>
   if (window.location.pathname !== "/" && !window.location.pathname.endsWith("index.html")) {
     window.location.href = "./index.html";
   }
 </script>
 
+<!-- NAV -->
 <nav>
   <a href="index.html">Mua Acc</a>
   <a href="shop.html">Random acc</a>
   <a href="contact.html">Liên hệ</a>
 </nav>
 
-<h1>SHOP TUYEN NGUYEN</h1>
-<p>Uy tín – Giao dịch nhanh – Giá hợp lý</p>
-
-<div class="category">
-  <a href="re.html"><button>💸 Acc giá rẻ</button></a>
-  <a href="trung.html"><button>💎 Acc giá trung</button></a>
-  <a href="cao.html"><button>🔥 Acc giá cao</button></a>
+<!-- BANNER -->
+<div class="banner">
+  <h1>🔥 SHOP ACC BLOX FRUITS 🔥</h1>
+  <p>Uy tín – Acc đúng hình – Giao dịch nhanh qua Zalo</p>
 </div>
 
-<a href="https://zalo.me/0352715663" target="_blank">
-  <button>Nhắn qua Zalo</button>
-</a>
+<!-- GIỚI THIỆU -->
+<h1>SHOP TUYEN NGUYEN</h1>
+<p style="text-align:center;">Uy tín – Giao dịch nhanh – Giá hợp lý</p>
+
+<!-- CHỌN LOẠI ACC -->
+<div class="select-acc">
+
+  <a href="re.html" class="acc-box re">
+    <h2>💸 Acc Giá Rẻ</h2>
+    <p>10.000đ – 80.000đ</p>
+    <span>Phù hợp người mới chơi</span>
+  </a>
+
+  <a href="trung.html" class="acc-box trung">
+    <h2>💎 Acc Giá Trung</h2>
+    <p>100.000đ – 300.000đ</p>
+    <span>Acc ngon – chơi ổn định</span>
+  </a>
+
+  <a href="cao.html" class="acc-box cao">
+    <h2>🔥 Acc Giá Cao</h2>
+    <p>Acc VIP – Full đồ xịn</p>
+    <span>Dành cho dân chơi</span>
+  </a>
+
+</div>
+
+<!-- ZALO -->
+<div class="zalo-box">
+  <a href="https://zalo.me/0352715663" target="_blank">
+    💬 Nhắn Zalo để mua acc ngay
+  </a>
+</div>
 
 <!-- POPUP THÔNG BÁO -->
 <div class="popup-overlay" id="popup">
-
   <div class="popup-box">
     <span class="popup-close" onclick="closePopup()">×</span>
 
-    <h2>📢 THÔNG BÁO QUAN TRỌNG – VUI LÒNG ĐỌC KỸ</h2>
+    <h2>📢 THÔNG BÁO QUAN TRỌNG</h2>
 
-    <p><b>🔹 TẤT CẢ ACC TRONG SHOP ÁP DỤNG TRẢ TRƯỚC 50%</b></p>
-    <p>👉 Sau khi thanh toán 50% giá trị acc, bạn sẽ được:</p>
+    <p><b>🔹 TẤT CẢ ACC ÁP DỤNG CỌC TRƯỚC 50%</b></p>
 
     <ul>
-      <li>✅ Vào acc chơi thoả mái</li>
-      <li>✅ Được giữ acc trong thời gian cọc</li>
-      <li>✅ Hỗ trợ đổi thông tin (email/mật khẩu) sau khi thanh toán đủ</li>
+      <li>✅ Vào acc chơi trước</li>
+      <li>✅ Giữ acc trong thời gian cọc</li>
+      <li>✅ Hỗ trợ đổi thông tin sau khi thanh toán đủ</li>
       <li>✅ Hướng dẫn bảo mật & bật 2FA</li>
     </ul>
 
-    <p><b>🔹 THANH TOÁN NỐT 50% CÒN LẠI</b></p>
-    <p>➡️ Sau khi xác nhận acc đúng mô tả</p>
-    <p>➡️ Shop bàn giao full thông tin + hỗ trợ sau mua</p>
-
-    <p><b>🔹 LƯU Ý QUAN TRỌNG</b></p>
+    <p><b>🔹 THANH TOÁN NỐT 50%</b></p>
     <ul>
-      <li>⚠️ Không hoàn tiền sau khi đã bàn giao acc</li>
-      <li>⚠️ Không bảo hành nếu khách tự ý chia sẻ thông tin</li>
-      <li>⚠️ Shop KHÔNG chịu trách nhiệm nếu acc bị mất do khách đổi sai hoặc vi phạm điều khoản game</li>
+      <li>✔ Sau khi kiểm tra acc đúng mô tả</li>
+      <li>✔ Shop bàn giao full thông tin</li>
     </ul>
 
-    <p>📩 <b>MỌI THẮC MẮC – LIÊN HỆ ADMIN ĐỂ ĐƯỢC HỖ TRỢ NHANH NHẤT</b></p>
+    <p><b>⚠️ LƯU Ý</b></p>
+    <ul>
+      <li>❌ Không hoàn tiền sau khi bàn giao</li>
+      <li>❌ Không bảo hành nếu khách chia sẻ acc</li>
+      <li>❌ Không chịu trách nhiệm nếu vi phạm điều khoản game</li>
+    </ul>
 
     <button onclick="closePopup()">Tôi đã hiểu</button>
   </div>
-
 </div>
 
 <script>
@@ -77,7 +103,6 @@ function closePopup() {
 
 </body>
 </html>
-
 
 
 
