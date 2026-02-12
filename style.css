@@ -354,6 +354,12 @@ button:hover {
   color: #fff;
   cursor: pointer;
 }
+.product.trung.active {
+  box-shadow: 0 0 25px #b388ff, 0 0 50px #7c4dff;
+  border: 2px solid #b388ff;
+  transform: scale(1.04);
+}
+
 
 
 
