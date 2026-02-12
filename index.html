@@ -8,17 +8,10 @@
   <!-- FAVICON -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- CSS (RẤT QUAN TRỌNG) -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- TỰ ĐỘNG VỀ INDEX -->
-<script>
-  if (window.location.pathname !== "/" && !window.location.pathname.endsWith("index.html")) {
-    window.location.href = "./index.html";
-  }
-</script>
 
 <!-- NAV -->
 <nav>
@@ -35,7 +28,7 @@
 
 <!-- GIỚI THIỆU -->
 <div class="intro">
-  <h1 class="shop-title">SHOP TUYEN NGUYEN</h1>
+  <h1 class="shop-title">SHOP TUYÊN NGUYÊN</h1>
   <p class="shop-desc">Uy tín – Giao dịch nhanh – Giá hợp lý</p>
 </div>
 
@@ -70,14 +63,13 @@
 </div>
 
 <!-- POPUP THÔNG BÁO -->
-<div class="popup-overlay" id="popup">
+<div class="popup-overlay" id="noticePopup">
   <div class="popup-box">
-    <span class="popup-close" onclick="closePopup()">×</span>
+    <span class="popup-close" onclick="closeNotice()">×</span>
 
     <h2>📢 THÔNG BÁO QUAN TRỌNG</h2>
 
     <p><b>🔹 TẤT CẢ ACC ÁP DỤNG CỌC TRƯỚC 50%</b></p>
-
     <ul>
       <li>✅ Vào acc chơi trước</li>
       <li>✅ Giữ acc trong thời gian cọc</li>
@@ -98,11 +90,11 @@
       <li>❌ Không chịu trách nhiệm nếu vi phạm điều khoản game</li>
     </ul>
 
-    <button onclick="closePopup()">Tôi đã hiểu</button>
+    <button onclick="closeNotice()">Tôi đã hiểu</button>
   </div>
 </div>
 
-<!-- HOA ĐÀO & LÌ XÌ RƠI -->
+<!-- HOA ĐÀO & LÌ XÌ -->
 <script>
 const icons = ["🌸","🧧"];
 setInterval(() => {
@@ -119,37 +111,9 @@ setInterval(() => {
 
 <!-- ĐÓNG POPUP -->
 <script>
-function closePopup() {
-  const popup = document.getElementById("popup");
-  if (popup) popup.style.display = "none";
+function closeNotice() {
+  document.getElementById("noticePopup").style.display = "none";
 }
-</script>
-  
-<script>
-  const products = document.querySelectorAll('.product');
-  const popup = document.getElementById('imagePopup');
-  const popupImg = document.getElementById('popupImg');
-
-  products.forEach(product => {
-    const img = product.querySelector('img');
-
-    img.addEventListener('click', () => {
-      products.forEach(p => p.classList.remove('active'));
-      product.classList.add('active');
-
-      popup.style.display = 'flex';
-      popupImg.src = img.src;
-    });
-  });
-
-  function closePopup() {
-    popup.style.display = 'none';
-    products.forEach(p => p.classList.remove('active'));
-  }
-
-  popup.addEventListener('click', e => {
-    if (e.target === popup) closePopup();
-  });
 </script>
 
 </body>
