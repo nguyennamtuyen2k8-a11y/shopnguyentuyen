@@ -325,6 +325,20 @@ h1 {
     padding: 16px;
   }
 }
+<script>
+const icons = ["🌸","🧧"];
+setInterval(() => {
+  const e = document.createElement("div");
+  e.className = "petal";
+  e.innerText = icons[Math.floor(Math.random()*icons.length)];
+  e.style.left = Math.random() * 100 + "vw";
+  e.style.animationDuration = (5 + Math.random()*5) + "s";
+  e.style.fontSize = (18 + Math.random()*18) + "px";
+  document.body.appendChild(e);
+  setTimeout(() => e.remove(), 12000);
+}, 500);
+</script>
+
 
 
 
