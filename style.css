@@ -87,7 +87,7 @@ nav a {
   transform: translateY(-8px) scale(1.03);
 }
 
-/* ===== MÀU TỪNG LOẠI ===== */
+/* ===== VIỀN TỪNG LOẠI ===== */
 .acc-box.re {
   border: 2px solid #4caf50;
 }
@@ -140,11 +140,10 @@ nav a {
   width: 200px;
   max-width: 100%;
   border-radius: 10px;
-  display: block;
-  margin: 0 auto 10px;
+  margin-bottom: 10px;
 }
 
-/* ===== PHONG CÁCH TẾT CHO ACC ===== */
+/* ===== ACC PHONG CÁCH TẾT ===== */
 .product.tet {
   border: 2px solid #ff4d4d;
   background: linear-gradient(180deg, #fffaf5, #fff);
@@ -167,12 +166,6 @@ nav a {
   font-size: 24px;
 }
 
-.product.tet:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
-  transition: 0.3s ease;
-}
-
 /* ===== BUTTON ===== */
 button {
   background: #2196f3;
@@ -188,13 +181,7 @@ button:hover {
   opacity: 0.9;
 }
 
-/* ===== TITLE ===== */
-h1 {
-  text-align: center;
-  margin: 20px 0 10px;
-}
-
-/* ===== ZALO BOX ===== */
+/* ===== ZALO ===== */
 .zalo-box {
   text-align: center;
   margin: 35px 0;
@@ -209,55 +196,29 @@ h1 {
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
-  box-shadow: 0 0 18px rgba(0, 140, 255, 0.5);
-}
-
-.zalo-box a:hover {
-  opacity: 0.9;
+  box-shadow: 0 0 18px rgba(0,140,255,0.5);
 }
 
 /* ===== POPUP ===== */
 .popup-overlay {
-  z-index: 10000;
-}
-
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 10000;
 }
 
 .popup-box {
-  position: relative;
-  background: #fff;
+  background: white;
   width: 90%;
   max-width: 600px;
   max-height: 85vh;
   padding: 22px;
   border-radius: 15px;
   overflow-y: auto;
-}
-
-.popup-box h2 {
-  text-align: center;
-  color: #e53935;
-  font-size: 20px;
-}
-
-.popup-box ul {
-  padding-left: 20px;
-}
-
-.popup-box ul li {
-  margin-bottom: 6px;
-}
-
-.popup-box button {
-  margin-top: 15px;
-  width: 100%;
+  position: relative;
 }
 
 .popup-close {
@@ -265,27 +226,16 @@ h1 {
   top: 10px;
   right: 12px;
   font-size: 24px;
-  font-weight: bold;
   cursor: pointer;
-  color: #666;
 }
 
-.popup-close:hover {
-  color: red;
-}
-
-/* ===== HIỆU ỨNG HOA & LÌ XÌ RƠI ===== */
+/* ===== HOA & LÌ XÌ RƠI ===== */
 .petal {
   position: fixed;
   top: -50px;
-  font-size: 26px;
   pointer-events: none;
   animation: fall linear infinite;
   z-index: 999;
-}
-
-.petal::before {
-  content: "🌸";
 }
 
 @keyframes fall {
@@ -294,26 +244,14 @@ h1 {
   }
 }
 
-/* ===== RESPONSIVE MOBILE ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   nav a {
     font-size: 14px;
-    margin: 6px 8px;
   }
 
   .banner h1 {
     font-size: 22px;
-  }
-
-  h1 {
-    font-size: 20px;
   }
 
   .acc-box,
@@ -325,21 +263,9 @@ h1 {
   .popup-box {
     max-width: 360px;
     font-size: 14px;
-    padding: 16px;
   }
 }
-.acc-box::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  box-shadow: 0 0 0 rgba(255,255,255,0);
-  transition: 0.3s;
-}
 
-.acc-box:hover::after {
-  box-shadow: 0 0 30px rgba(255,255,255,0.25);
-}
 
 
 
