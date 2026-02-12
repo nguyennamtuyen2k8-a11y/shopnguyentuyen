@@ -265,6 +265,23 @@ button:hover {
     font-size: 14px;
   }
 }
+.shop-title {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.shop-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
 
 
 
