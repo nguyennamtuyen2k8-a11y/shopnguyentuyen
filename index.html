@@ -108,9 +108,18 @@ setInterval(() => {
   setTimeout(() => e.remove(), 12000);
 }, 500);
 </script>
+<script>
+function closePopup() {
+  const popup = document.getElementById("popup");
+  if (popup) {
+    popup.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
+
 
 
 
