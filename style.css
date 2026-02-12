@@ -309,6 +309,51 @@ button:hover {
   }
 
 }
+/* ===== FIX GIAO DIỆN MOBILE ===== */
+@media (max-width: 768px) {
+
+  /* Tiêu đề shop */
+  .shop-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 12px;
+  }
+
+  /* Dòng mô tả dưới tiêu đề */
+  .shop-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 14px;
+    line-height: 1.5;
+  }
+
+  /* Khu chọn acc */
+  .select-acc {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .acc-box {
+    width: 92%;
+    max-width: 360px;
+  }
+
+  /* Nút Zalo */
+  .zalo-box a {
+    width: 90%;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  /* Tránh chữ bị dạt do hiệu ứng */
+  body {
+    overflow-x: hidden;
+  }
+}
+
 
 
 
