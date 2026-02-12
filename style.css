@@ -286,6 +286,30 @@ button:hover {
   color: #555;
   margin-bottom: 30px;
 }
+/* ===== FIX LỆCH TRÊN MOBILE ===== */
+@media (max-width: 768px) {
+
+  .intro {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .shop-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .shop-desc {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 12px;
+  }
+
+}
+
 
 
 
