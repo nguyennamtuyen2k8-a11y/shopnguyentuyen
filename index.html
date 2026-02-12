@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop Acc Blox Fruits - Tuyên Nguyên</title>
 
+  <!-- FAVICON -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- CSS (RẤT QUAN TRỌNG) -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -98,26 +102,26 @@
   </div>
 </div>
 
+<!-- HOA ĐÀO & LÌ XÌ RƠI -->
 <script>
 const icons = ["🌸","🧧"];
 setInterval(() => {
   const e = document.createElement("div");
   e.className = "petal";
-  e.innerText = icons[Math.floor(Math.random()*icons.length)];
+  e.innerText = icons[Math.floor(Math.random() * icons.length)];
   e.style.left = Math.random() * 100 + "vw";
-  e.style.animationDuration = (5 + Math.random()*5) + "s";
-  e.style.fontSize = (18 + Math.random()*18) + "px";
+  e.style.animationDuration = (5 + Math.random() * 5) + "s";
+  e.style.fontSize = (18 + Math.random() * 18) + "px";
   document.body.appendChild(e);
   setTimeout(() => e.remove(), 12000);
 }, 500);
 </script>
-  
+
+<!-- ĐÓNG POPUP -->
 <script>
 function closePopup() {
   const popup = document.getElementById("popup");
-  if (popup) {
-    popup.style.display = "none";
-  }
+  if (popup) popup.style.display = "none";
 }
 </script>
 
