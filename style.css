@@ -25,264 +25,6 @@ nav a {
   display: inline-block;
 }
 
-/* ===== CATEGORY ===== */
-.category {
-  text-align: center;
-}
-
-.category a {
-  display: inline-block;
-  margin: 12px;
-  padding: 14px 22px;
-  background: #ff5722;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-/* ===== PRODUCT LIST ===== */
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 10px;
-}
-
-.product {
-  background: white;
-  width: 260px;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  text-align: center;
-  position: relative;
-}
-
-.product img {
-  width: 200px;
-  max-width: 100%;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-/* ===== BUTTON ===== */
-button {
-  background: #2196f3;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-/* ===== TITLE ===== */
-h1 {
-  text-align: center;
-  margin: 20px 0 10px;
-}
-
-/* ===== CONTACT BOX ===== */
-.contact-box {
-  max-width: 500px;
-  margin: 40px auto;
-  background: linear-gradient(135deg, #1e90ff, #00c6ff);
-  padding: 25px;
-  border-radius: 16px;
-  color: white;
-  text-align: center;
-}
-
-.contact-box img {
-  width: 120px;
-  margin-bottom: 15px;
-  border-radius: 12px;
-}
-
-/* ===== POPUP OVERLAY ===== */
-.popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.popup-box {
-  position: relative;
-  background: #fff;
-  width: 90%;
-  max-width: 600px;
-  max-height: 85vh;
-  padding: 22px;
-  border-radius: 15px;
-  overflow-y: auto;
-}
-
-.popup-box h2 {
-  text-align: center;
-  color: #e53935;
-  font-size: 20px;
-}
-
-.popup-box ul {
-  padding-left: 20px;
-}
-
-.popup-box ul li {
-  margin-bottom: 6px;
-}
-
-.popup-box button {
-  margin-top: 15px;
-}
-
-/* ===== NÚT ĐÓNG POPUP ===== */
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #666;
-}
-
-.popup-close:hover {
-  color: red;
-}
-
-/* ===== THÔNG BÁO TẾT ===== */
-.tet-notice {
-  border: 2px solid #ff3b3b;
-  background: linear-gradient(135deg, #fff4e6, #ffe0e0);
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 14px;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.25);
-}
-
-.tet-notice h2 {
-  text-align: center;
-  color: #d40000;
-}
-
-.tet-notice h3 {
-  color: #ff6600;
-}
-
-.tet-notice ul {
-  padding-left: 20px;
-}
-
-.tet-notice li {
-  margin: 6px 0;
-}
-
-.tet-notice .highlight {
-  color: #ff0000;
-  font-weight: bold;
-}
-
-.tet-notice hr {
-  border: none;
-  border-top: 1px dashed #ff9999;
-  margin: 15px 0;
-}
-
-.tet-notice .wish {
-  text-align: center;
-  font-weight: bold;
-  color: #c40000;
-}
-
-/* ===== PHONG CÁCH TẾT CHO ACC ===== */
-.product.tet {
-  border: 2px solid #ff4d4d;
-  background: linear-gradient(180deg, #fffaf5, #fff);
-  box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
-}
-
-.product.tet::before {
-  content: "🌸";
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  font-size: 26px;
-}
-
-.product.tet::after {
-  content: "🧧";
-  position: absolute;
-  bottom: -8px;
-  right: -8px;
-  font-size: 24px;
-}
-
-.product.tet:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
-  transition: 0.3s ease;
-}
-
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 768px) {
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    font-size: 14px;
-    margin: 6px 8px;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  .product {
-    width: 90%;
-    max-width: 320px;
-  }
-
-  .popup-box {
-    max-width: 360px;
-    font-size: 14px;
-    padding: 16px;
-  }
-
-  .popup-close {
-    font-size: 22px;
-  }
-}
-.petal {
-  position: fixed;
-  top: -50px;
-  font-size: 26px;
-  pointer-events: none;
-  animation: fall linear infinite;
-  z-index: 9999;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
 /* ===== BANNER INDEX ===== */
 .banner {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -358,6 +100,100 @@ h1 {
   border: 2px solid #ff5722;
 }
 
+/* ===== CATEGORY (NÚT CŨ) ===== */
+.category {
+  text-align: center;
+}
+
+.category a {
+  display: inline-block;
+  margin: 12px;
+  padding: 14px 22px;
+  background: #ff5722;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* ===== PRODUCT LIST ===== */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.product {
+  background: white;
+  width: 260px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+}
+
+.product img {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* ===== PHONG CÁCH TẾT CHO ACC ===== */
+.product.tet {
+  border: 2px solid #ff4d4d;
+  background: linear-gradient(180deg, #fffaf5, #fff);
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+}
+
+.product.tet::before {
+  content: "🌸";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  font-size: 26px;
+}
+
+.product.tet::after {
+  content: "🧧";
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  font-size: 24px;
+}
+
+.product.tet:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+/* ===== BUTTON ===== */
+button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===== TITLE ===== */
+h1 {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
 /* ===== ZALO BOX ===== */
 .zalo-box {
   text-align: center;
@@ -380,15 +216,113 @@ h1 {
   opacity: 0.9;
 }
 
-/* ===== MOBILE ===== */
+/* ===== POPUP ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-box {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh;
+  padding: 22px;
+  border-radius: 15px;
+  overflow-y: auto;
+}
+
+.popup-box h2 {
+  text-align: center;
+  color: #e53935;
+  font-size: 20px;
+}
+
+.popup-box ul {
+  padding-left: 20px;
+}
+
+.popup-box ul li {
+  margin-bottom: 6px;
+}
+
+.popup-box button {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+
+.popup-close:hover {
+  color: red;
+}
+
+/* ===== HIỆU ỨNG HOA & LÌ XÌ RƠI ===== */
+.petal {
+  position: fixed;
+  top: -50px;
+  font-size: 26px;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 999;
+}
+
+.petal::before {
+  content: "🌸";
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 6px 8px;
+  }
+
   .banner h1 {
     font-size: 22px;
   }
 
-  .acc-box {
+  h1 {
+    font-size: 20px;
+  }
+
+  .acc-box,
+  .product {
     width: 90%;
     max-width: 330px;
+  }
+
+  .popup-box {
+    max-width: 360px;
+    font-size: 14px;
+    padding: 16px;
   }
 }
 
