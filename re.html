@@ -268,6 +268,35 @@ for (let i = 0; i < 30; i++) {
   <span class="close-popup">×</span>
   <img id="popupImg">
 </div>
+<script>
+const products = document.querySelectorAll('.product');
+const popup = document.getElementById('imagePopup');
+const popupImg = document.getElementById('popupImg');
+const closeBtn = document.querySelector('.close-popup');
+
+products.forEach(product => {
+  const img = product.querySelector('img');
+
+  img.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    products.forEach(p => p.classList.remove('active'));
+    product.classList.add('active');
+
+    popup.style.display = 'flex';
+    popupImg.src = img.src;
+  });
+});
+
+closeBtn.onclick = () => {
+  popup.style.display = 'none';
+  products.forEach(p => p.classList.remove('active'));
+};
+
+popup.onclick = (e) => {
+  if (e.target === popup) closeBtn.onclick();
+};
+</script>
 
 </body>
 </html>
