@@ -1,16 +1,17 @@
-/* ===== RESET & BODY ===== */
+/* ================= RESET & BODY ================= */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
-  margin: 0;
   overflow-x: hidden;
 }
 
-/* ===== NAV ===== */
+/* ================= NAV ================= */
 nav {
   background: #111;
   padding: 10px;
@@ -25,10 +26,10 @@ nav a {
   display: inline-block;
 }
 
-/* ===== BANNER INDEX ===== */
+/* ================= BANNER ================= */
 .banner {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
+  color: #fff;
   padding: 45px 15px;
   text-align: center;
 }
@@ -42,7 +43,30 @@ nav a {
   opacity: 0.9;
 }
 
-/* ===== CHỌN LOẠI ACC ===== */
+/* ================= GIỚI THIỆU SHOP ================= */
+.shop-title {
+  text-align: center;
+  margin: 35px auto 8px;
+  font-size: 26px;
+}
+
+.shop-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #ff5722;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+.shop-desc {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* ================= CHỌN LOẠI ACC ================= */
 .select-acc {
   display: flex;
   justify-content: center;
@@ -55,7 +79,7 @@ nav a {
 
 .acc-box {
   width: 280px;
-  background: white;
+  background: #fff;
   border-radius: 18px;
   padding: 25px;
   text-align: center;
@@ -100,34 +124,19 @@ nav a {
   border: 2px solid #ff5722;
 }
 
-/* ===== CATEGORY (NÚT CŨ) ===== */
-.category {
-  text-align: center;
-}
-
-.category a {
-  display: inline-block;
-  margin: 12px;
-  padding: 14px 22px;
-  background: #ff5722;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-/* ===== PRODUCT LIST ===== */
+/* ================= PRODUCT ================= */
 .products {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
   max-width: 1200px;
   margin: 30px auto;
   padding: 10px;
 }
 
 .product {
-  background: white;
+  background: #fff;
   width: 260px;
   padding: 15px;
   border-radius: 12px;
@@ -143,7 +152,7 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* ===== ACC PHONG CÁCH TẾT ===== */
+/* ===== PHONG CÁCH TẾT ===== */
 .product.tet {
   border: 2px solid #ff4d4d;
   background: linear-gradient(180deg, #fffaf5, #fff);
@@ -166,10 +175,10 @@ nav a {
   font-size: 24px;
 }
 
-/* ===== BUTTON ===== */
+/* ================= BUTTON ================= */
 button {
   background: #2196f3;
-  color: white;
+  color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 8px;
@@ -181,7 +190,7 @@ button:hover {
   opacity: 0.9;
 }
 
-/* ===== ZALO ===== */
+/* ================= ZALO ================= */
 .zalo-box {
   text-align: center;
   margin: 35px 0;
@@ -191,7 +200,7 @@ button:hover {
   background: linear-gradient(135deg, #1e90ff, #00c6ff);
   padding: 16px 26px;
   border-radius: 14px;
-  color: white;
+  color: #fff;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
@@ -199,7 +208,7 @@ button:hover {
   box-shadow: 0 0 18px rgba(0,140,255,0.5);
 }
 
-/* ===== POPUP ===== */
+/* ================= POPUP ================= */
 .popup-overlay {
   position: fixed;
   inset: 0;
@@ -211,7 +220,7 @@ button:hover {
 }
 
 .popup-box {
-  background: white;
+  background: #fff;
   width: 90%;
   max-width: 600px;
   max-height: 85vh;
@@ -229,7 +238,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* ===== HOA & LÌ XÌ RƠI ===== */
+/* ================= HOA & LÌ XÌ ================= */
 .petal {
   position: fixed;
   top: -50px;
@@ -244,8 +253,9 @@ button:hover {
   }
 }
 
-/* ===== MOBILE ===== */
+/* ================= MOBILE CHUẨN ================= */
 @media (max-width: 768px) {
+
   nav a {
     font-size: 14px;
   }
@@ -254,10 +264,36 @@ button:hover {
     font-size: 22px;
   }
 
+  .shop-title {
+    font-size: 22px;
+    margin: 30px auto 6px;
+    padding: 0 12px;
+    text-align: center;
+  }
+
+  .shop-desc {
+    text-align: center;
+    padding: 0 14px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  .select-acc {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
   .acc-box,
   .product {
+    width: 92%;
+    max-width: 360px;
+  }
+
+  .zalo-box a {
     width: 90%;
-    max-width: 330px;
+    max-width: 360px;
+    text-align: center;
   }
 
   .popup-box {
@@ -265,94 +301,8 @@ button:hover {
     font-size: 14px;
   }
 }
-.shop-title {
-  text-align: center;
-  margin-top: 35px;
-  margin-bottom: 8px;
-}
 
-.shop-title::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background: #ff5722;
-  margin: 10px auto 0;
-  border-radius: 5px;
-}
 
-.shop-desc {
-  text-align: center;
-  color: #555;
-  margin-bottom: 30px;
-}
-/* ===== FIX LỆCH TRÊN MOBILE ===== */
-@media (max-width: 768px) {
-
-  .intro {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .shop-title {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .shop-desc {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 12px;
-  }
-
-}
-/* ===== FIX GIAO DIỆN MOBILE ===== */
-@media (max-width: 768px) {
-
-  /* Tiêu đề shop */
-  .shop-title {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 12px;
-  }
-
-  /* Dòng mô tả dưới tiêu đề */
-  .shop-desc {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 14px;
-    line-height: 1.5;
-  }
-
-  /* Khu chọn acc */
-  .select-acc {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .acc-box {
-    width: 92%;
-    max-width: 360px;
-  }
-
-  /* Nút Zalo */
-  .zalo-box a {
-    width: 90%;
-    max-width: 360px;
-    text-align: center;
-  }
-
-  /* Tránh chữ bị dạt do hiệu ứng */
-  body {
-    overflow-x: hidden;
-  }
-}
 
 
 
