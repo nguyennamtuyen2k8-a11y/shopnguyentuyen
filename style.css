@@ -130,28 +130,42 @@ h1 {
   box-shadow: 0 5px 15px rgba(0,140,255,0.4);
 }
 
-/* ================= POPUP ZOOM ẢNH ================= */
+/* ===== POPUP ZOOM ẢNH (MƯỢT) ===== */
 .image-popup {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease;
   z-index: 100000;
+}
+
+.image-popup.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .image-popup img {
   max-width: 90%;
   max-height: 90%;
-  border-radius: 12px;
+  border-radius: 14px;
+  transform: scale(0.8);
+  transition: transform 0.35s ease;
+}
+
+.image-popup.show img {
+  transform: scale(1);
 }
 
 .close-popup {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 40px;
+  font-size: 42px;
   color: #fff;
   cursor: pointer;
 }
@@ -244,6 +258,7 @@ h1 {
     font-size: 22px;
   }
 }
+
 
 
 
