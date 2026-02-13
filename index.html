@@ -121,9 +121,23 @@ function closeNotice() {
   document.getElementById("noticePopup").style.display = "none";
 }
 </script>
+  
+<script>
+function closeNotice() {
+  document.getElementById("noticePopup").style.display = "none";
+  localStorage.setItem("hideNotice", "1");
+}
+
+window.addEventListener("load", () => {
+  if (localStorage.getItem("hideNotice") === "1") {
+    document.getElementById("noticePopup").style.display = "none";
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
 
