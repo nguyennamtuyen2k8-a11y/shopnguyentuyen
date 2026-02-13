@@ -13,26 +13,26 @@
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ================= NAV ================= -->
 <nav>
   <a href="index.html">Mua Acc</a>
   <a href="shop.html">Random acc</a>
   <a href="contact.html">Liên hệ</a>
 </nav>
 
-<!-- BANNER -->
+<!-- ================= BANNER ================= -->
 <div class="banner">
   <h1>🔥 SHOP ACC BLOX FRUITS 🔥</h1>
   <p>Uy tín – Acc đúng hình – Giao dịch nhanh qua Zalo</p>
 </div>
 
-<!-- GIỚI THIỆU -->
+<!-- ================= GIỚI THIỆU ================= -->
 <div class="intro">
   <h1 class="shop-title">SHOP TUYÊN NGUYÊN</h1>
   <p class="shop-desc">Uy tín – Giao dịch nhanh – Giá hợp lý</p>
 </div>
 
-<!-- CHỌN LOẠI ACC -->
+<!-- ================= CHỌN LOẠI ACC ================= -->
 <div class="select-acc">
 
   <a href="re.html" class="acc-box re">
@@ -55,14 +55,14 @@
 
 </div>
 
-<!-- ZALO -->
+<!-- ================= ZALO ================= -->
 <div class="zalo-box">
   <a href="https://zalo.me/0352715663" target="_blank">
     💬 Nhắn Zalo để mua acc ngay
   </a>
 </div>
 
-<!-- POPUP THÔNG BÁO -->
+<!-- ================= POPUP THÔNG BÁO ================= -->
 <div class="popup-overlay" id="noticePopup">
   <div class="popup-box">
     <span class="popup-close" onclick="closeNotice()">×</span>
@@ -94,7 +94,7 @@
   </div>
 </div>
 
-<!-- HOA ĐÀO & LÌ XÌ -->
+<!-- ================= HOA ĐÀO & LÌ XÌ ================= -->
 <script>
 const icons = ["🌸","🧧"];
 setInterval(() => {
@@ -102,14 +102,14 @@ setInterval(() => {
   e.className = "petal";
   e.innerText = icons[Math.floor(Math.random() * icons.length)];
   e.style.left = Math.random() * 100 + "vw";
-  e.style.animationDuration = (5 + Math.random() * 5) + "s";
+  e.style.animationDuration = (6 + Math.random() * 6) + "s";
   e.style.fontSize = (18 + Math.random() * 18) + "px";
   document.body.appendChild(e);
   setTimeout(() => e.remove(), 12000);
-}, 500);
+}, 700);
 </script>
 
-<!-- ĐÓNG POPUP -->
+<!-- ================= JS ĐÓNG POPUP ================= -->
 <script>
 function closeNotice() {
   document.getElementById("noticePopup").style.display = "none";
@@ -118,6 +118,7 @@ function closeNotice() {
 
 </body>
 </html>
+
 
 
 
