@@ -277,6 +277,25 @@ nav a {
   font-size: 15px;
   line-height: 1.6;
 }
+/* ===== NÚT MUA QUA ZALO ===== */
+.buy-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #1e90ff, #00c6ff);
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,140,255,0.4);
+  transition: 0.25s ease;
+}
+
+.buy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,140,255,0.6);
+}
+
 
 
 
