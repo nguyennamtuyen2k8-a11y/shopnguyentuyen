@@ -62,35 +62,41 @@
   </a>
 </div>
 
-<!-- ================= POPUP THÔNG BÁO ================= -->
-<div class="popup-overlay" id="noticePopup">
-  <div class="popup-box">
-    <span class="popup-close" onclick="closeNotice()">×</span>
+<!-- ===== POPUP THÔNG BÁO ===== -->
+<div class="notice-popup-overlay" id="noticePopup">
+  <div class="notice-popup">
+    <span class="notice-close" onclick="closeNotice()">×</span>
 
     <h2>📢 THÔNG BÁO QUAN TRỌNG</h2>
 
-    <p><b>🔹 TẤT CẢ ACC ÁP DỤNG CỌC TRƯỚC 50%</b></p>
-    <ul>
-      <li>✅ Vào acc chơi trước</li>
-      <li>✅ Giữ acc trong thời gian cọc</li>
-      <li>✅ Hỗ trợ đổi thông tin sau khi thanh toán đủ</li>
-      <li>✅ Hướng dẫn bảo mật & bật 2FA</li>
-    </ul>
+    <div class="notice-block">
+      <h3>🔐 CỌC TRƯỚC 50%</h3>
+      <ul>
+        <li>✅ Được vào acc chơi thử trước</li>
+        <li>✅ Shop giữ acc trong thời gian cọc</li>
+        <li>✅ Hỗ trợ đổi thông tin sau khi thanh toán đủ</li>
+        <li>✅ Hướng dẫn bảo mật & bật 2FA</li>
+      </ul>
+    </div>
 
-    <p><b>🔹 THANH TOÁN NỐT 50%</b></p>
-    <ul>
-      <li>✔ Sau khi kiểm tra acc đúng mô tả</li>
-      <li>✔ Shop bàn giao full thông tin</li>
-    </ul>
+    <div class="notice-block">
+      <h3>💰 THANH TOÁN NỐT 50%</h3>
+      <ul>
+        <li>✔️ Sau khi kiểm tra acc đúng mô tả</li>
+        <li>✔️ Shop bàn giao đầy đủ thông tin</li>
+      </ul>
+    </div>
 
-    <p><b>⚠️ LƯU Ý</b></p>
-    <ul>
-      <li>❌ Không hoàn tiền sau khi bàn giao</li>
-      <li>❌ Không bảo hành nếu khách chia sẻ acc</li>
-      <li>❌ Không chịu trách nhiệm nếu vi phạm điều khoản game</li>
-    </ul>
+    <div class="notice-block warning">
+      <h3>⚠️ LƯU Ý</h3>
+      <ul>
+        <li>❌ Không hoàn tiền sau khi bàn giao acc</li>
+        <li>❌ Không bảo hành nếu chia sẻ acc</li>
+        <li>❌ Không chịu trách nhiệm nếu vi phạm điều khoản game</li>
+      </ul>
+    </div>
 
-    <button onclick="closeNotice()">Tôi đã hiểu</button>
+    <button class="notice-btn" onclick="closeNotice()">Tôi đã hiểu</button>
   </div>
 </div>
 
@@ -118,6 +124,7 @@ function closeNotice() {
 
 </body>
 </html>
+
 
 
 
