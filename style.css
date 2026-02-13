@@ -251,6 +251,33 @@ nav a {
     max-width: 360px;
   }
 }
+/* ===== BẢNG THÔNG BÁO / KHUYẾN MÃI ===== */
+.notice-box {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-left: 6px solid #ff5722;
+}
+
+.notice-box h2 {
+  margin-bottom: 15px;
+  color: #d84315;
+}
+
+.notice-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.notice-box li {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 
 
 
