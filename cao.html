@@ -187,6 +187,19 @@ for (let i = 0; i < 35; i++) {
   document.body.appendChild(p);
 }
 </script>
+  
+<script>
+function closePromo() {
+  document.getElementById("promoPopup").style.display = "none";
+  localStorage.setItem("hidePromoCao", "1");
+}
+
+window.addEventListener("load", () => {
+  if (localStorage.getItem("hidePromoCao") === "1") {
+    document.getElementById("promoPopup").style.display = "none";
+  }
+});
+</script>
 
 </body>
 </html>
