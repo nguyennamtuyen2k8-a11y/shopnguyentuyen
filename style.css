@@ -410,6 +410,48 @@ h1 {
     padding: 10px 14px;
   }
 }
+/* ===== NÚT LIÊN HỆ ZALO ===== */
+.zalo-contact-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  background: linear-gradient(135deg, #00bfff, #007bff);
+  color: #fff;
+
+  padding: 14px 22px;
+  border-radius: 30px;
+
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.zalo-contact-btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #0099ff, #0056b3);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .zalo-contact-btn {
+    bottom: 14px;
+    left: 14px;
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}
+
 
 
 
