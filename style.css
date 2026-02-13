@@ -1,4 +1,4 @@
-/* ================= RESET & BODY ================= */
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -36,8 +36,6 @@ nav a {
   color: #fff;
   padding: 45px 15px;
   text-align: center;
-  position: relative;
-  z-index: 10;
 }
 
 .banner h1 {
@@ -45,38 +43,15 @@ nav a {
   margin-bottom: 10px;
 }
 
-.banner p {
-  opacity: 0.9;
-}
-
-/* ================= GIỚI THIỆU ================= */
-.shop-title {
+/* ================= TIÊU ĐỀ ================= */
+.shop-title,
+h1 {
   text-align: center;
-  margin: 35px auto 8px;
+  margin: 35px auto 10px;
   font-size: 26px;
-  position: relative;
-  z-index: 10;
 }
 
-.shop-title::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background: #ff5722;
-  margin: 10px auto 0;
-  border-radius: 5px;
-}
-
-.shop-desc {
-  text-align: center;
-  color: #555;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 10;
-}
-
-/* ================= CHỌN LOẠI ACC ================= */
+/* ================= SELECT ACC ================= */
 .select-acc {
   display: flex;
   justify-content: center;
@@ -84,9 +59,6 @@ nav a {
   margin: 40px auto;
   flex-wrap: wrap;
   max-width: 1200px;
-  padding: 0 10px;
-  position: relative;
-  z-index: 10;
 }
 
 .acc-box {
@@ -95,36 +67,21 @@ nav a {
   border-radius: 18px;
   padding: 25px;
   text-align: center;
-  text-decoration: none;
   color: #111;
+  text-decoration: none;
   box-shadow: 0 0 15px rgba(0,0,0,0.12);
   transition: 0.3s ease;
 }
 
 .acc-box:hover {
-  transform: translateY(-8px) scale(1.03);
-}
-
-.acc-box h2 { margin-bottom: 8px; }
-
-.acc-box p {
-  font-size: 18px;
-  font-weight: bold;
-  color: #e53935;
-}
-
-.acc-box span {
-  display: block;
-  margin-top: 6px;
-  color: #555;
-  font-size: 14px;
+  transform: translateY(-6px) scale(1.03);
 }
 
 .acc-box.re { border: 2px solid #4caf50; }
 .acc-box.trung { border: 2px solid #2196f3; }
 .acc-box.cao { border: 2px solid #ff5722; }
 
-/* ================= PRODUCT ================= */
+/* ================= PRODUCTS ================= */
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -132,9 +89,6 @@ nav a {
   gap: 20px;
   max-width: 1200px;
   margin: 30px auto;
-  padding: 10px;
-  position: relative;
-  z-index: 10;
 }
 
 .product {
@@ -142,10 +96,10 @@ nav a {
   width: 260px;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
   text-align: center;
-  position: relative;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .product img {
@@ -155,26 +109,16 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* ================= HIỆU ỨNG ACC ================= */
-.product.re.active {
-  border: 2px solid #4caf50;
-  box-shadow: 0 0 20px #4caf50;
-}
-
-.product.trung.active {
-  border: 2px solid #7c4dff;
-  box-shadow: 0 0 25px #b388ff, 0 0 50px #7c4dff;
-}
-
-.product.cao.active {
+/* ===== ACTIVE ACC (ZOOM) ===== */
+.product.active {
   border: 2px solid gold;
   box-shadow: 0 0 25px gold, 0 0 60px orange;
+  transform: scale(1.04);
 }
 
 /* ================= NÚT MUA ================= */
-.buy-btn,
-.product button {
-  display: inline-block;
+.product button,
+.buy-btn {
   margin-top: 8px;
   padding: 10px 16px;
   background: linear-gradient(135deg, #1e90ff, #00c6ff);
@@ -186,167 +130,7 @@ nav a {
   box-shadow: 0 5px 15px rgba(0,140,255,0.4);
 }
 
-/* ================= BẢNG THÔNG BÁO (FIX CỨNG) ================= */
-.notice-box {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 25px 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  border-left: 6px solid #ff5722;
-  position: relative;
-  z-index: 20; /* LUÔN NỔI TRÊN HOA */
-}
-
-.notice-box h2 {
-  margin-bottom: 15px;
-  color: #d84315;
-}
-
-.notice-box ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.notice-box li {
-  margin: 8px 0;
-  font-size: 15px;
-}
-
-/* ================= HOA RƠI (NỀN) ================= */
-.petal {
-  position: fixed;
-  top: -50px;
-  pointer-events: none;
-  animation: fall linear infinite;
-  z-index: 1; /* QUAN TRỌNG: LUÔN Ở SAU */
-}
-
-@keyframes fall {
-  to { transform: translateY(110vh) rotate(360deg); }
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .banner h1 { font-size: 22px; }
-
-  .select-acc {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .acc-box,
-  .product {
-    width: 92%;
-    max-width: 360px;
-  }
-}
-/* ===== FIX THÔNG BÁO ACC GIÁ CAO ===== */
-.cao-notice {
-  position: relative;
-  z-index: 50;
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 30px 35px;
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-  border-left: 7px solid #ff5722;
-}
-
-.cao-notice h2 {
-  color: #d84315;
-  margin-bottom: 15px;
-}
-
-.cao-notice ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.cao-notice li {
-  margin: 8px 0;
-  font-size: 15px;
-}
-
-/* Đảm bảo hoa rơi KHÔNG đè */
-.petal {
-  z-index: 1 !important;
-}
-/* ===== POPUP KHUYẾN MÃI ===== */
-.promo-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-}
-
-.promo-box {
-  background: #fff;
-  max-width: 520px;
-  width: 92%;
-  padding: 28px 30px;
-  border-radius: 18px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-  position: relative;
-  animation: popupZoom 0.35s ease;
-}
-
-@keyframes popupZoom {
-  from { transform: scale(0.85); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-.promo-box h2 {
-  color: #d84315;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.promo-title {
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.promo-box ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.promo-box li {
-  margin: 6px 0;
-  font-size: 15px;
-}
-
-.promo-close {
-  position: absolute;
-  top: 10px;
-  right: 16px;
-  font-size: 30px;
-  cursor: pointer;
-  color: #888;
-}
-
-.promo-close:hover {
-  color: #000;
-}
-
-.promo-btn {
-  margin-top: 15px;
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #ff5722, #ff9800);
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
+/* ================= POPUP ZOOM ẢNH ================= */
 .image-popup {
   position: fixed;
   inset: 0;
@@ -354,7 +138,7 @@ nav a {
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 100000;
 }
 
 .image-popup img {
@@ -372,6 +156,94 @@ nav a {
   cursor: pointer;
 }
 
+/* ================= POPUP KHUYẾN MÃI ================= */
+.promo-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 90000;
+}
+
+.promo-box {
+  background: #fff;
+  max-width: 520px;
+  width: 92%;
+  padding: 28px 30px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  position: relative;
+  animation: popupZoom 0.3s ease;
+}
+
+@keyframes popupZoom {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.promo-box h2 {
+  text-align: center;
+  color: #d84315;
+  margin-bottom: 12px;
+}
+
+.promo-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.promo-box li {
+  margin: 6px 0;
+}
+
+.promo-close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.promo-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ================= HOA RƠI ================= */
+.petal {
+  position: fixed;
+  top: -50px;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 1;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .product,
+  .acc-box {
+    width: 92%;
+    max-width: 360px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
 
 
 
