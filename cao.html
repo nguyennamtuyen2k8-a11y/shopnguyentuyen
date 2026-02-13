@@ -173,3 +173,33 @@ window.addEventListener("load", () => {
   }
 });
 </script>
+<!-- ===== POPUP ẢNH ZOOM ===== -->
+<div id="imagePopup" class="image-popup">
+  <span class="close-popup" id="closePopup">×</span>
+  <img id="popupImg">
+</div>
+
+<script>
+document.querySelectorAll(".product img").forEach(img => {
+  img.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    document.getElementById("imagePopup").style.display = "flex";
+    document.getElementById("popupImg").src = img.src;
+  });
+});
+
+document.getElementById("closePopup").onclick = () => {
+  document.getElementById("imagePopup").style.display = "none";
+};
+
+document.getElementById("imagePopup").onclick = (e) => {
+  if (e.target.id === "imagePopup") {
+    document.getElementById("imagePopup").style.display = "none";
+  }
+};
+</script>
+  
+</body>
+</html>
