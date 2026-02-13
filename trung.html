@@ -153,34 +153,25 @@ for (let i = 0; i < 30; i++) {
   <span class="close-popup">×</span>
   <img id="popupImg">
 </div>
+  
 <script>
-const products = document.querySelectorAll('.product');
-const popup = document.getElementById('imagePopup');
-const popupImg = document.getElementById('popupImg');
-const closeBtn = document.querySelector('.close-popup');
+const popup = document.getElementById("imagePopup");
+const popupImg = document.getElementById("popupImg");
 
-products.forEach(product => {
-  const img = product.querySelector('img');
-  if (!img) return;
-
-  img.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    products.forEach(p => p.classList.remove('active'));
-    product.classList.add('active');
-
-    popup.style.display = 'flex';
+document.querySelectorAll(".product img").forEach(img => {
+  img.style.cursor = "zoom-in";
+  img.onclick = () => {
+    popup.classList.add("show");
     popupImg.src = img.src;
-  });
+  };
 });
 
-closeBtn.onclick = () => {
-  popup.style.display = 'none';
-  products.forEach(p => p.classList.remove('active'));
+document.querySelector(".close-popup").onclick = () => {
+  popup.classList.remove("show");
 };
 
 popup.onclick = (e) => {
-  if (e.target === popup) closeBtn.onclick();
+  if (e.target === popup) popup.classList.remove("show");
 };
 </script>
 
