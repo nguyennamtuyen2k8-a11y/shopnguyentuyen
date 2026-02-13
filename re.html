@@ -246,17 +246,22 @@ for (let i = 0; i < 30; i++) {
 <script>
 const popup = document.getElementById("imagePopup");
 const popupImg = document.getElementById("popupImg");
-const closeBtn = document.querySelector(".close-popup");
 
-document.querySelectorAll(".product img").forEach(img=>{
-  img.onclick = ()=>{
-    popup.style.display="flex";
+document.querySelectorAll(".product img").forEach(img => {
+  img.style.cursor = "zoom-in";
+  img.onclick = () => {
+    popup.classList.add("show");
     popupImg.src = img.src;
-  }
+  };
 });
 
-closeBtn.onclick = ()=> popup.style.display="none";
-popup.onclick = e => { if(e.target===popup) popup.style.display="none"; }
+document.querySelector(".close-popup").onclick = () => {
+  popup.classList.remove("show");
+};
+
+popup.onclick = (e) => {
+  if (e.target === popup) popup.classList.remove("show");
+};
 </script>
 
 </body>
