@@ -258,6 +258,39 @@ h1 {
     font-size: 22px;
   }
 }
+/* ===== HOA ĐÀO ===== */
+.hoa-dao::before {
+  content: "🌸";
+}
+
+.hoa-dao {
+  position: fixed;
+  top: -40px;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ===== LÌ XÌ ===== */
+.li-xi::before {
+  content: "🧧";
+}
+
+.li-xi {
+  position: fixed;
+  top: -40px;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
 
 
 
