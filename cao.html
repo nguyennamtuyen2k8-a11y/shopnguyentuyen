@@ -172,26 +172,27 @@ window.addEventListener("load", () => {
   <img id="popupImg">
 </div>
 
-<script>
-document.querySelectorAll(".product img").forEach(img => {
-  img.style.cursor = "zoom-in";
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("imagePopup");
+  const popupImg = document.getElementById("popupImg");
+  const closeBtn = document.querySelector(".close-popup");
 
-  img.addEventListener("click", () => {
-    document.getElementById("imagePopup").style.display = "flex";
-    document.getElementById("popupImg").src = img.src;
+  document.querySelectorAll(".product img").forEach(img => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", () => {
+      popup.classList.add("show");
+      popupImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("show");
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) popup.classList.remove("show");
   });
 });
-
-document.querySelector(".close-popup").onclick = () => {
-  document.getElementById("imagePopup").style.display = "none";
-};
-
-document.getElementById("imagePopup").onclick = (e) => {
-  if (e.target.id === "imagePopup") {
-    document.getElementById("imagePopup").style.display = "none";
-  }
-};
-</script>
 
 </body>
 </html>
