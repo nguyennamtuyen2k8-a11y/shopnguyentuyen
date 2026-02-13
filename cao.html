@@ -173,16 +173,15 @@ window.addEventListener("load", () => {
 
 <script>
 document.querySelectorAll(".product img").forEach(img => {
-  img.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+  img.style.cursor = "zoom-in";
 
+  img.addEventListener("click", () => {
     document.getElementById("imagePopup").style.display = "flex";
     document.getElementById("popupImg").src = img.src;
   });
 });
 
-document.getElementById("closePopup").onclick = () => {
+document.querySelector(".close-popup").onclick = () => {
   document.getElementById("imagePopup").style.display = "none";
 };
 
@@ -192,6 +191,6 @@ document.getElementById("imagePopup").onclick = (e) => {
   }
 };
 </script>
-  
+
 </body>
 </html>
