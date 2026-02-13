@@ -10,6 +10,7 @@ body {
   background: #f5f5f5;
   overflow-x: hidden;
   line-height: 1.5;
+  position: relative;
 }
 
 /* ================= NAV ================= */
@@ -17,6 +18,8 @@ nav {
   background: #111;
   padding: 10px;
   text-align: center;
+  position: relative;
+  z-index: 50;
 }
 
 nav a {
@@ -33,6 +36,8 @@ nav a {
   color: #fff;
   padding: 45px 15px;
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 .banner h1 {
@@ -49,6 +54,8 @@ nav a {
   text-align: center;
   margin: 35px auto 8px;
   font-size: 26px;
+  position: relative;
+  z-index: 10;
 }
 
 .shop-title::after {
@@ -65,6 +72,8 @@ nav a {
   text-align: center;
   color: #555;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
 }
 
 /* ================= CHỌN LOẠI ACC ================= */
@@ -76,6 +85,8 @@ nav a {
   flex-wrap: wrap;
   max-width: 1200px;
   padding: 0 10px;
+  position: relative;
+  z-index: 10;
 }
 
 .acc-box {
@@ -122,6 +133,8 @@ nav a {
   max-width: 1200px;
   margin: 30px auto;
   padding: 10px;
+  position: relative;
+  z-index: 10;
 }
 
 .product {
@@ -142,7 +155,7 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* ===== HIỆU ỨNG ACC ===== */
+/* ================= HIỆU ỨNG ACC ================= */
 .product.re.active {
   border: 2px solid #4caf50;
   box-shadow: 0 0 20px #4caf50;
@@ -158,16 +171,14 @@ nav a {
   box-shadow: 0 0 25px gold, 0 0 60px orange;
 }
 
-/* ================= NÚT MUA QUA ZALO (FIX MÀU) ================= */
+/* ================= NÚT MUA ================= */
 .buy-btn,
-.product a.buy-btn,
 .product button {
   display: inline-block;
   margin-top: 8px;
   padding: 10px 16px;
   background: linear-gradient(135deg, #1e90ff, #00c6ff);
-  color: #fff !important;
-  text-decoration: none !important;
+  color: #fff;
   font-weight: bold;
   border-radius: 8px;
   border: none;
@@ -175,11 +186,7 @@ nav a {
   box-shadow: 0 5px 15px rgba(0,140,255,0.4);
 }
 
-.buy-btn:hover {
-  transform: translateY(-2px);
-}
-
-/* ================= BẢNG THÔNG BÁO / KHUYẾN MÃI (FIX MẤT KHUNG) ================= */
+/* ================= BẢNG THÔNG BÁO (FIX CỨNG) ================= */
 .notice-box {
   max-width: 1100px;
   margin: 40px auto;
@@ -188,6 +195,8 @@ nav a {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   border-left: 6px solid #ff5722;
+  position: relative;
+  z-index: 20; /* LUÔN NỔI TRÊN HOA */
 }
 
 .notice-box h2 {
@@ -205,39 +214,13 @@ nav a {
   font-size: 15px;
 }
 
-/* ================= POPUP ẢNH ================= */
-.image-popup {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.image-popup img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-}
-
-.image-popup span {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 32px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* ================= HOA RƠI ================= */
+/* ================= HOA RƠI (NỀN) ================= */
 .petal {
   position: fixed;
   top: -50px;
   pointer-events: none;
   animation: fall linear infinite;
-  z-index: 999;
+  z-index: 1; /* QUAN TRỌNG: LUÔN Ở SAU */
 }
 
 @keyframes fall {
@@ -259,6 +242,7 @@ nav a {
     max-width: 360px;
   }
 }
+
 
 
 
