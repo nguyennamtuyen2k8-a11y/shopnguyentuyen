@@ -169,31 +169,6 @@
   </div>
 </div>
 
-<!-- ===== SCRIPT ===== -->
-<script>
-function closeTetPopup() {
-  document.getElementById("tetPopup").style.display = "none";
-}
-
-/* Hoa rơi */
-const icons = ["🌸","🧧","🧧"];
-for (let i = 0; i < 35; i++) {
-  const p = document.createElement("div");
-  p.className = "petal";
-  p.innerText = icons[Math.floor(Math.random()*icons.length)];
-  p.style.left = Math.random()*100 + "vw";
-  p.style.animationDuration = 6 + Math.random()*6 + "s";
-  p.style.fontSize = 22 + Math.random()*10 + "px";
-  document.body.appendChild(p);
-}
-</script>
-  
-  <!-- POPUP KHUYẾN MÃI -->
-<div class="promo-overlay" id="promoPopup">
-  ...
-</div>
-
-<!-- JAVASCRIPT ĐÓNG POPUP -->
 <script>
 function closePromo() {
   document.getElementById("promoPopup").style.display = "none";
@@ -206,6 +181,3 @@ window.addEventListener("load", () => {
   }
 });
 </script>
-
-</body>
-</html>
