@@ -9,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
   overflow-x: hidden;
+  line-height: 1.5;
 }
 
 /* ================= NAV ================= */
@@ -43,7 +44,7 @@ nav a {
   opacity: 0.9;
 }
 
-/* ================= GIỚI THIỆU SHOP ================= */
+/* ================= GIỚI THIỆU ================= */
 .shop-title {
   text-align: center;
   margin: 35px auto 8px;
@@ -93,9 +94,7 @@ nav a {
   transform: translateY(-8px) scale(1.03);
 }
 
-.acc-box h2 {
-  margin-bottom: 8px;
-}
+.acc-box h2 { margin-bottom: 8px; }
 
 .acc-box p {
   font-size: 18px;
@@ -110,7 +109,6 @@ nav a {
   font-size: 14px;
 }
 
-/* ===== VIỀN LOẠI ACC ===== */
 .acc-box.re { border: 2px solid #4caf50; }
 .acc-box.trung { border: 2px solid #2196f3; }
 .acc-box.cao { border: 2px solid #ff5722; }
@@ -135,7 +133,6 @@ nav a {
   text-align: center;
   position: relative;
   transition: 0.3s ease;
-  cursor: pointer;
 }
 
 .product img {
@@ -145,51 +142,74 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* ===== HIỆU ỨNG THEO LOẠI ACC ===== */
+/* ===== HIỆU ỨNG ACC ===== */
 .product.re.active {
   border: 2px solid #4caf50;
   box-shadow: 0 0 20px #4caf50;
-  transform: scale(1.03);
 }
 
 .product.trung.active {
   border: 2px solid #7c4dff;
   box-shadow: 0 0 25px #b388ff, 0 0 50px #7c4dff;
-  transform: scale(1.04);
 }
 
 .product.cao.active {
   border: 2px solid gold;
-  box-shadow:
-    0 0 25px gold,
-    0 0 60px orange,
-    0 0 100px gold;
-  transform: scale(1.05);
+  box-shadow: 0 0 25px gold, 0 0 60px orange;
 }
 
-/* ================= ZALO ================= */
-.zalo-box {
-  text-align: center;
-  margin: 35px 0;
-}
-
-.zalo-box a {
-  background: linear-gradient(135deg, #1e90ff, #00c6ff);
-  padding: 16px 26px;
-  border-radius: 14px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
+/* ================= NÚT MUA QUA ZALO (FIX MÀU) ================= */
+.buy-btn,
+.product a.buy-btn,
+.product button {
   display: inline-block;
-  box-shadow: 0 0 18px rgba(0,140,255,0.5);
+  margin-top: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #1e90ff, #00c6ff);
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,140,255,0.4);
 }
 
-/* ================= POPUP PHÓNG TO ẢNH ================= */
+.buy-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= BẢNG THÔNG BÁO / KHUYẾN MÃI (FIX MẤT KHUNG) ================= */
+.notice-box {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-left: 6px solid #ff5722;
+}
+
+.notice-box h2 {
+  margin-bottom: 15px;
+  color: #d84315;
+}
+
+.notice-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.notice-box li {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* ================= POPUP ẢNH ================= */
 .image-popup {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   display: none;
   justify-content: center;
   align-items: center;
@@ -200,8 +220,6 @@ nav a {
   max-width: 90%;
   max-height: 90%;
   border-radius: 12px;
-  box-shadow: 0 0 30px #00aaff;
-  animation: zoomIn 0.3s ease;
 }
 
 .image-popup span {
@@ -211,11 +229,6 @@ nav a {
   font-size: 32px;
   color: #fff;
   cursor: pointer;
-}
-
-@keyframes zoomIn {
-  from { transform: scale(0.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
 }
 
 /* ================= HOA RƠI ================= */
@@ -245,57 +258,7 @@ nav a {
     width: 92%;
     max-width: 360px;
   }
-
-  .zalo-box a {
-    width: 90%;
-    max-width: 360px;
-  }
 }
-/* ===== BẢNG THÔNG BÁO / KHUYẾN MÃI ===== */
-.notice-box {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 25px 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border-left: 6px solid #ff5722;
-}
-
-.notice-box h2 {
-  margin-bottom: 15px;
-  color: #d84315;
-}
-
-.notice-box ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.notice-box li {
-  margin: 8px 0;
-  font-size: 15px;
-  line-height: 1.6;
-}
-/* ===== NÚT MUA QUA ZALO ===== */
-.buy-btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 10px 16px;
-  background: linear-gradient(135deg, #1e90ff, #00c6ff);
-  color: #fff !important;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,140,255,0.4);
-  transition: 0.25s ease;
-}
-
-.buy-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,140,255,0.6);
-}
-
 
 
 
