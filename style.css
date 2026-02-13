@@ -242,6 +242,39 @@ nav a {
     max-width: 360px;
   }
 }
+/* ===== FIX THÔNG BÁO ACC GIÁ CAO ===== */
+.cao-notice {
+  position: relative;
+  z-index: 50;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 30px 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  border-left: 7px solid #ff5722;
+}
+
+.cao-notice h2 {
+  color: #d84315;
+  margin-bottom: 15px;
+}
+
+.cao-notice ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.cao-notice li {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* Đảm bảo hoa rơi KHÔNG đè */
+.petal {
+  z-index: 1 !important;
+}
+
 
 
 
