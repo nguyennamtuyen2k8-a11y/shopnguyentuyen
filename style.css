@@ -224,6 +224,61 @@ h1 {
     padding: 10px 14px;
   }
 }
+/* ================= TRANG CHỦ CHỌN ACC ================= */
+.select-acc {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.acc-box {
+  background: #fff;
+  width: 280px;
+  padding: 25px 20px;
+  border-radius: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: #111;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.acc-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.acc-box h2 {
+  margin-bottom: 10px;
+}
+
+.acc-box p {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.acc-box span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* MÀU RIÊNG */
+.acc-box.re {
+  border-top: 5px solid #4caf50;
+}
+
+.acc-box.trung {
+  border-top: 5px solid #2196f3;
+}
+
+.acc-box.cao {
+  border-top: 5px solid #ff5722;
+}
+
 
 
 
