@@ -177,13 +177,25 @@ window.addEventListener("load", () => {
 function createFallingItem(type) {
   const item = document.createElement("div");
   item.className = type;
+
   item.style.left = Math.random() * 100 + "vw";
-  item.style.animationDuration = (Math.random() * 3 + 4) + "s";
-  item.style.fontSize = (Math.random() * 20 + 20) + "px";
+  item.style.animationDuration = (Math.random() * 3 + 5) + "s";
+  item.style.fontSize = (Math.random() * 10 + 20) + "px";
+
   document.body.appendChild(item);
 
-  setTimeout(() => item.remove(), 8000);
+  setTimeout(() => {
+    item.remove();
+  }, 9000);
 }
+
+function startFalling() {
+  setInterval(() => createFallingItem("hoa-dao"), 500);
+  setInterval(() => createFallingItem("li-xi"), 800);
+}
+
+window.addEventListener("load", startFalling);
+</script>
 
 <!-- ===== POPUP ẢNH ZOOM ===== -->
 <div id="imagePopup" class="image-popup">
