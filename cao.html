@@ -215,6 +215,27 @@ window.addEventListener("load", function() {
     </ul>
   </div>
 </div>
+  <!-- toàn bộ nội dung trang ở trên -->
+
+  <script>
+    const promo = document.getElementById("promoOverlay");
+
+    const delay = Math.floor(Math.random() * 5000) + 15000;
+
+    setTimeout(() => {
+      if (!sessionStorage.getItem("promoClosed")) {
+        promo.style.display = "flex";
+      }
+    }, delay);
+
+    function closePromo() {
+      promo.style.display = "none";
+      sessionStorage.setItem("promoClosed", "true");
+    }
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
