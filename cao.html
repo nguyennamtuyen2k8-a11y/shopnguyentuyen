@@ -189,28 +189,29 @@ window.addEventListener("load", () => {
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function() {
   const popup = document.getElementById("imagePopup");
   const popupImg = document.getElementById("popupImg");
-  const closeBtn = document.querySelector(".close-popup");
+  const closeBtn = document.getElementById("closePopup");
 
   document.querySelectorAll(".product img").forEach(img => {
     img.style.cursor = "zoom-in";
-    img.addEventListener("click", () => {
-      popup.classList.add("show");
-      popupImg.src = img.src;
+    img.addEventListener("click", function() {
+      popup.style.display = "flex";
+      popupImg.src = this.src;
     });
   });
 
-  closeBtn.addEventListener("click", () => {
-    popup.classList.remove("show");
-  });
+  closeBtn.onclick = function() {
+    popup.style.display = "none";
+  };
 
-  popup.addEventListener("click", (e) => {
-    if (e.target === popup) popup.classList.remove("show");
-  });
+  popup.onclick = function(e) {
+    if (e.target === popup) popup.style.display = "none";
+  };
 });
 </script>
+
 <!-- ===== HIỆU ỨNG HOA ĐÀO & LÌ XÌ ===== -->
 <script>
 function createFallingItem(type) {
