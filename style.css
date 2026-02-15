@@ -341,6 +341,29 @@ h1 {
         font-size: 14px;
     }
 }
+.hoa-dao,
+.li-xi {
+  position: fixed;
+  top: -40px;
+  pointer-events: none;
+  z-index: 5;
+  animation: fall linear forwards;
+}
+
+.hoa-dao::before {
+  content: "🌸";
+}
+
+.li-xi::before {
+  content: "🧧";
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
 
 
 
