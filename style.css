@@ -13,6 +13,12 @@ body {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ================= NAV ================= */
 nav {
   background: #111;
@@ -58,6 +64,7 @@ h1 {
   gap: 20px;
   max-width: 1200px;
   margin: 30px auto;
+  padding: 0 15px;
 }
 
 /* ================= CARD SẢN PHẨM ================= */
@@ -68,25 +75,18 @@ h1 {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
-  overflow: hidden; /* QUAN TRỌNG để zoom không tràn */
+  transition: 0.25s ease;
 }
 
 .product:hover {
   transform: translateY(-5px);
 }
 
-/* ================= ẢNH + ZOOM ================= */
+/* ================= ẢNH (KHÔNG ZOOM) ================= */
 .product img {
-  width: 200px;
-  max-width: 100%;
+  width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
-  transition: transform 0.4s ease;
-}
-
-.product:hover img {
-  transform: scale(1.2);
 }
 
 /* ================= NÚT MUA ================= */
@@ -100,7 +100,7 @@ h1 {
   border: none;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0,140,255,0.4);
-  transition: 0.3s ease;
+  transition: 0.25s ease;
 }
 
 .product button:hover {
@@ -141,12 +141,6 @@ h1 {
   border-radius: 18px;
   box-shadow: 0 25px 60px rgba(0,0,0,0.4);
   position: relative;
-  animation: popupZoom 0.3s ease;
-}
-
-@keyframes popupZoom {
-  from { transform: scale(0.85); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
 }
 
 .notice-popup h2 {
@@ -206,24 +200,6 @@ h1 {
   100% { box-shadow: 0 0 0 0 rgba(0,132,255,0); }
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .product {
-    width: 92%;
-    max-width: 360px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  .zalo-float {
-    bottom: 16px;
-    left: 16px;
-    font-size: 14px;
-    padding: 10px 14px;
-  }
-}
 /* ================= TRANG CHỦ CHỌN ACC ================= */
 .select-acc {
   display: flex;
@@ -266,46 +242,35 @@ h1 {
   color: #666;
 }
 
-/* MÀU RIÊNG */
-.acc-box.re {
-  border-top: 5px solid #4caf50;
-}
+.acc-box.re { border-top: 5px solid #4caf50; }
+.acc-box.trung { border-top: 5px solid #2196f3; }
+.acc-box.cao { border-top: 5px solid #ff5722; }
 
-.acc-box.trung {
-  border-top: 5px solid #2196f3;
-}
-
-.acc-box.cao {
-  border-top: 5px solid #ff5722;
-}
-/* ================= FIX MOBILE TRANG MUA ACC ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   .products {
     flex-direction: column;
     align-items: center;
     gap: 18px;
-    padding: 0 12px;
   }
 
   .product {
-    width: 100%;
+    width: 92%;
     max-width: 360px;
   }
 
-  .product img {
-    width: 100%;
+  h1 {
+    font-size: 22px;
   }
 
-  /* Tắt zoom hover trên mobile để không vỡ */
-  .product:hover img {
-    transform: none;
+  .zalo-float {
+    bottom: 16px;
+    left: 16px;
+    font-size: 14px;
+    padding: 10px 14px;
   }
-
 }
-
-
-
 
 
 
