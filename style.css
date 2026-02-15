@@ -1,256 +1,134 @@
-/* ================= RESET ================= */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Acc Blox Fruits - Tuyên Nguyên</title>
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  overflow-x: hidden;
-  line-height: 1.5;
-  position: relative;
-}
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-/* ================= NAV ================= */
-nav {
-  background: #111;
-  padding: 12px;
-  text-align: center;
-  position: relative;
-  z-index: 50;
-}
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-nav a {
-  color: #fff;
-  margin: 8px 14px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
+<body>
 
-/* ================= BANNER ================= */
-.banner {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
-  padding: 45px 15px;
-  text-align: center;
-}
+<!-- ================= NAV ================= -->
+<nav>
+    <a href="index.html">Mua Acc</a>
+    <a href="shop.html">Random acc</a>
+    <a href="contact.html">Liên hệ</a>
+</nav>
 
-.banner h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
+<!-- ================= BANNER ================= -->
+<div class="banner">
+    <h1>🔥 SHOP ACC BLOX FRUITS 🔥</h1>
+    <p>Uy tín – Acc đúng hình – Giao dịch nhanh qua Zalo</p>
+</div>
 
-/* ================= TIÊU ĐỀ ================= */
-h1 {
-  text-align: center;
-  margin: 35px auto 10px;
-  font-size: 26px;
-}
+<!-- ================= GIỚI THIỆU ================= -->
+<div class="intro">
+    <h1 class="shop-title">SHOP TUYÊN NGUYỄN</h1>
+</div>
 
-/* ================= DANH SÁCH ACC ================= */
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 30px auto;
-}
+<!-- ================= CHỌN LOẠI ACC ================= -->
+<div class="select-acc">
+    <a href="re.html" class="acc-box re">
+        <h2>💸 Acc Giá Rẻ</h2>
+        <p>10.000đ – 80.000đ</p>
+        <span>Phù hợp người mới chơi</span>
+    </a>
 
-/* ================= CARD SẢN PHẨM ================= */
-.product {
-  background: #fff;
-  width: 260px;
-  padding: 15px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
-}
+    <a href="trung.html" class="acc-box trung">
+        <h2>💎 Acc Giá Trung</h2>
+        <p>100.000đ – 250.000đ</p>
+        <span>Acc ngon – chơi ổn định</span>
+    </a>
 
-.product:hover {
-  transform: translateY(-5px);
-}
+    <a href="cao.html" class="acc-box cao">
+        <h2>🔥 Acc Giá Cao</h2>
+        <p>VIP – Nhiều trái vĩnh viễn</p>
+        <span>Dành cho dân chơi</span>
+    </a>
+</div>
 
-/* ================= ẢNH ================= */
-.product img {
-  width: 200px;
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  cursor: pointer; /* QUAN TRỌNG */
-  transition: 0.3s ease;
-}
+<!-- ================= POPUP THÔNG BÁO ================= -->
+<div class="notice-popup-overlay" id="noticePopup">
+    <div class="notice-popup">
+        <span class="notice-close" onclick="closeNotice()">×</span>
 
-/* ================= NÚT MUA ================= */
-.product button {
-  margin-top: 8px;
-  padding: 10px 16px;
-  background: linear-gradient(135deg, #1e90ff, #00c6ff);
-  color: #fff;
-  font-weight: bold;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,140,255,0.4);
-  transition: 0.3s ease;
-}
+        <h2>📢 THÔNG BÁO QUAN TRỌNG</h2>
 
-.product button:hover {
-  transform: scale(1.05);
-}
+        <div class="notice-block">
+            <h3>🔐 CỌC TRƯỚC 50%</h3>
+            <ul>
+                <li>✅ Được vào acc chơi trước</li>
+                <li>✅ Shop giữ acc trong thời gian cọc</li>
+                <li>✅ Hỗ trợ đổi thông tin sau khi thanh toán đủ</li>
+                <li>✅ Hướng dẫn bảo mật & bật 2FA</li>
+            </ul>
+        </div>
 
-/* ================= HOA RƠI ================= */
-.petal {
-  position: fixed;
-  top: -50px;
-  pointer-events: none;
-  animation: fall linear forwards;
-  z-index: 1;
-}
+        <div class="notice-block">
+            <h3>💰 THANH TOÁN NỐT 50%</h3>
+            <ul>
+                <li>✔️ Sau khi kiểm tra acc đúng mô tả</li>
+                <li>✔️ Shop bàn giao đầy đủ thông tin</li>
+            </ul>
+        </div>
 
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
+        <div class="notice-block warning">
+            <h3>⚠️ LƯU Ý</h3>
+            <ul>
+                <li>❌ Không hoàn tiền sau khi bàn giao acc</li>
+                <li>❌ Không bảo hành nếu tiết lộ thông tin acc</li>
+                <li>❌ Không chịu trách nhiệm nếu vi phạm điều khoản game</li>
+            </ul>
+        </div>
 
-/* ================= POPUP ================= */
-.notice-popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-}
+        <button class="notice-btn" onclick="closeNotice()">Tôi đã hiểu</button>
+    </div>
+</div>
 
-.notice-popup {
-  background: #fff;
-  width: 92%;
-  max-width: 520px;
-  padding: 28px 30px;
-  border-radius: 18px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
-  position: relative;
-  animation: popupZoom 0.3s ease;
-}
+<!-- ================= HOA ĐÀO & LÌ XÌ ================= -->
+<script>
+    const icons = ["🌸", "🧧"];
 
-@keyframes popupZoom {
-  from { transform: scale(0.85); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
+    setInterval(() => {
+        const e = document.createElement("div");
+        e.className = "petal";
+        e.innerText = icons[Math.floor(Math.random() * icons.length)];
+        e.style.left = Math.random() * 100 + "vw";
+        e.style.animationDuration = (6 + Math.random() * 6) + "s";
+        e.style.fontSize = (18 + Math.random() * 18) + "px";
+        document.body.appendChild(e);
 
-.notice-popup h2 {
-  text-align: center;
-  color: #d32f2f;
-  margin-bottom: 18px;
-}
+        setTimeout(() => e.remove(), 12000);
+    }, 700);
+</script>
 
-.notice-btn {
-  margin-top: 15px;
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #ff5722, #ff9800);
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
+<!-- ================= JS POPUP ================= -->
+<script>
+    function closeNotice() {
+        document.getElementById("noticePopup").style.display = "none";
+        localStorage.setItem("hideNotice", "1");
+    }
 
-.notice-close {
-  position: absolute;
-  top: 10px;
-  right: 16px;
-  font-size: 28px;
-  cursor: pointer;
-}
+    window.addEventListener("load", () => {
+        if (localStorage.getItem("hideNotice") === "1") {
+            document.getElementById("noticePopup").style.display = "none";
+        }
+    });
+</script>
 
-/* ================= NÚT ZALO ================= */
-.zalo-float {
-  position: fixed;
-  bottom: 22px;
-  left: 22px;
-  background: #0084ff;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 8px 25px rgba(0,132,255,0.45);
-  z-index: 100000;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  animation: zaloPulse 1.6s infinite;
-  transition: 0.25s ease;
-}
+<!-- ================= ZALO FLOAT ================= -->
+<a href="https://zalo.me/0352715663" target="_blank" class="zalo-float">
+    💬 Nhắn Zalo mua acc ngay
+</a>
 
-.zalo-float:hover {
-  transform: scale(1.05);
-}
-
-@keyframes zaloPulse {
-  0% { box-shadow: 0 0 0 0 rgba(0,132,255,0.6); }
-  70% { box-shadow: 0 0 0 15px rgba(0,132,255,0); }
-  100% { box-shadow: 0 0 0 0 rgba(0,132,255,0); }
-}
-
-/* ================= IMAGE MODAL ================= */
-.image-modal {
-  display: none;
-  position: fixed;
-  z-index: 999999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.image-modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px black;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .product {
-    width: 92%;
-    max-width: 360px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  .zalo-float {
-    bottom: 16px;
-    left: 16px;
-    font-size: 14px;
-    padding: 10px 14px;
-  }
-}
-
+</body>
+</html>
 
 
 
