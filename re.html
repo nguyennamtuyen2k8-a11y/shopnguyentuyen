@@ -273,23 +273,28 @@
 
 <!-- 🌸 HIỆU ỨNG -->
 <script>
-const icons = ["🌸","🧧"];
-for (let i = 0; i < 30; i++) {
-  const e = document.createElement("div");
-  e.className = "petal";
-  e.innerText = icons[Math.floor(Math.random() * icons.length)];
-  e.style.left = Math.random() * 100 + "vw";
-  e.style.animationDuration = 6 + Math.random() * 6 + "s";
-  e.style.fontSize = 20 + Math.random() * 10 + "px";
-  document.body.appendChild(e);
-}
-</script>
+function createFallingItem(type) {
+  const item = document.createElement("div");
+  item.className = type;
 
-<!-- ===== POPUP ẢNH ZOOM ===== -->
-<div id="imagePopup" class="image-popup">
-  <span class="close-popup" id="closePopup">×</span>
-  <img id="popupImg">
-</div>
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.animationDuration = (Math.random() * 3 + 5) + "s";
+  item.style.fontSize = (Math.random() * 10 + 20) + "px";
+
+  document.body.appendChild(item);
+
+  setTimeout(() => {
+    item.remove();
+  }, 9000);
+}
+
+function startFalling() {
+  setInterval(() => createFallingItem("hoa-dao"), 500);
+  setInterval(() => createFallingItem("li-xi"), 800);
+}
+
+window.addEventListener("load", startFalling);
+</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
