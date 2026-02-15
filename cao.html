@@ -204,10 +204,12 @@ window.addEventListener("load", startFalling);
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
   const popup = document.getElementById("imagePopup");
   const popupImg = document.getElementById("popupImg");
   const closeBtn = document.getElementById("closePopup");
+
+  if (!popup || !popupImg || !closeBtn) return;
 
   document.querySelectorAll(".product img").forEach(img => {
     img.style.cursor = "zoom-in";
@@ -217,13 +219,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  closeBtn.onclick = function() {
+  closeBtn.addEventListener("click", () => {
     popup.style.display = "none";
-  };
+  });
 
-  popup.onclick = function(e) {
+  popup.addEventListener("click", (e) => {
     if (e.target === popup) popup.style.display = "none";
-  };
+  });
 });
 </script>
 
