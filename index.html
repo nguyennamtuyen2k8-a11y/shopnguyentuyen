@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop Acc Blox Fruits - Tuyên Nguyên</title>
+  <title>Shop Acc Blox Fruits - Tuyên Nguyễn</title>
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- ================= NAV ================= -->
@@ -54,7 +52,7 @@
 
 </div>
 
-<!-- ===== POPUP THÔNG BÁO ===== -->
+<!-- ================= POPUP THÔNG BÁO ================= -->
 <div class="notice-popup-overlay" id="noticePopup">
   <div class="notice-popup">
     <span class="notice-close" onclick="closeNotice()">×</span>
@@ -92,7 +90,12 @@
   </div>
 </div>
 
-<!-- ================= HOA ĐÀO & LÌ XÌ ================= -->
+<!-- ================= NÚT ZALO ================= -->
+<a href="https://zalo.me/0352715663" target="_blank" class="zalo-float">
+  💬 Liên hệ Zalo ở đây
+</a>
+
+<!-- ================= HIỆU ỨNG HOA ĐÀO & LÌ XÌ ================= -->
 <script>
 const icons = ["🌸","🧧"];
 setInterval(() => {
@@ -107,31 +110,11 @@ setInterval(() => {
 }, 700);
 </script>
 
-<!-- ================= JS ĐÓNG POPUP ================= -->
+<!-- ================= JS POPUP ================= -->
 <script>
 function closeNotice() {
-  document.getElementById("noticePopup").style.display = "none";
-}
-</script>
-  
-<script>
-function closeNotice() {
-  document.getElementById("noticePopup").style.display = "none";
-  localStorage.setItem("hideNotice", "1");
-}
-
-window.addEventListener("load", () => {
-  if (localStorage.getItem("hideNotice") === "1") {
-    document.getElementById("noticePopup").style.display = "none";
-  }
-});
-</script>
-<a href="https://zalo.me/0352715663" target="_blank" class="zalo-float">
-  💬 Nhắn Zalo mua acc ngay
-</a>
-<script>
-function closeNotice() {
-  document.getElementById("noticePopup").style.display = "none";
+  const popup = document.getElementById("noticePopup");
+  popup.style.display = "none";
   localStorage.setItem("hideNotice", "1");
 }
 
@@ -144,7 +127,6 @@ window.addEventListener("load", function() {
 
 </body>
 </html>
-
 
 
 
