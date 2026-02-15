@@ -71,8 +71,8 @@
       <h3>💰 THANH TOÁN NỐT 50%</h3>
       <ul>
         <li>✔️ Sau khi kiểm tra acc đúng mô tả</li>
-        <li>✔️ Hỗ trợ đổi thông tin
-        <li>✔️ Hướng dẫn bảo mật & bật 2FA
+        <li>✔️ Hỗ trợ đổi thông tin</li>
+        <li>✔️ Hướng dẫn bảo mật & bật 2FA</li>
         <li>✔️ Shop bàn giao đầy đủ thông tin</li>
       </ul>
     </div>
@@ -122,32 +122,6 @@ window.addEventListener("load", function() {
   if (localStorage.getItem("hideNotice") === "1") {
     document.getElementById("noticePopup").style.display = "none";
   }
-});
-</script>
-<!-- Image Zoom Modal -->
-<div id="imageModal" class="image-modal">
-    <span class="close-btn">&times;</span>
-    <img id="zoomedImg">
-</div>
-<script>
-document.querySelectorAll(".product img").forEach(img => {
-    img.addEventListener("click", function() {
-        const modal = document.getElementById("imageModal");
-        const zoomedImg = document.getElementById("zoomedImg");
-
-        zoomedImg.src = this.src;
-        modal.style.display = "flex";
-    });
-});
-
-document.querySelector(".close-btn").addEventListener("click", function() {
-    document.getElementById("imageModal").style.display = "none";
-});
-
-document.getElementById("imageModal").addEventListener("click", function(e) {
-    if (e.target === this) {
-        this.style.display = "none";
-    }
 });
 </script>
 
