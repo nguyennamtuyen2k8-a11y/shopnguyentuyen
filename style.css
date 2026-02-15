@@ -298,6 +298,50 @@ h1 {
   color: #fff;
   cursor: pointer;
 }
+.promo-box {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #fff5f5, #ffeaea);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.promo-box h2 {
+    text-align: center;
+    color: #e60000;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.promo-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.promo-box li {
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .promo-box {
+        margin: 20px;
+        padding: 18px;
+    }
+
+    .promo-box h2 {
+        font-size: 20px;
+    }
+
+    .promo-box li {
+        font-size: 14px;
+    }
+}
+
 
 
 
