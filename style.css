@@ -278,6 +278,32 @@ h1 {
 .acc-box.cao {
   border-top: 5px solid #ff5722;
 }
+/* ================= FIX MOBILE TRANG MUA ACC ================= */
+@media (max-width: 768px) {
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 0 12px;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .product img {
+    width: 100%;
+  }
+
+  /* Tắt zoom hover trên mobile để không vỡ */
+  .product:hover img {
+    transform: none;
+  }
+
+}
+
 
 
 
