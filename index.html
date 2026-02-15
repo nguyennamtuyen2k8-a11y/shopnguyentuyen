@@ -129,9 +129,22 @@ window.addEventListener("load", () => {
 <a href="https://zalo.me/0352715663" target="_blank" class="zalo-float">
   💬 Nhắn Zalo mua acc ngay
 </a>
+<script>
+function closeNotice() {
+  document.getElementById("noticePopup").style.display = "none";
+  localStorage.setItem("hideNotice", "1");
+}
+
+window.addEventListener("load", function() {
+  if (localStorage.getItem("hideNotice") === "1") {
+    document.getElementById("noticePopup").style.display = "none";
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
 
