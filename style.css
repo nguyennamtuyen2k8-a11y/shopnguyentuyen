@@ -69,24 +69,20 @@ h1 {
   text-align: center;
   box-shadow: 0 0 12px rgba(0,0,0,0.1);
   transition: 0.3s ease;
-  overflow: hidden; /* QUAN TRỌNG để zoom không tràn */
 }
 
 .product:hover {
   transform: translateY(-5px);
 }
 
-/* ================= ẢNH + ZOOM ================= */
+/* ================= ẢNH ================= */
 .product img {
   width: 200px;
   max-width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
-  transition: transform 0.4s ease;
-}
-
-.product:hover img {
-  transform: scale(1.2);
+  cursor: pointer; /* QUAN TRỌNG */
+  transition: 0.3s ease;
 }
 
 /* ================= NÚT MUA ================= */
@@ -206,6 +202,36 @@ h1 {
   100% { box-shadow: 0 0 0 0 rgba(0,132,255,0); }
 }
 
+/* ================= IMAGE MODAL ================= */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .product {
@@ -224,35 +250,6 @@ h1 {
     padding: 10px 14px;
   }
 }
-.image-modal {
-    display: none;
-    position: fixed;
-    z-index: 99999; /* cực cao để nổi lên trên */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.image-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px black;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
 
 
 
