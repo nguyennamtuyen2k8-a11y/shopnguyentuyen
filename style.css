@@ -351,11 +351,11 @@ h1 {
 }
 
 .hoa-dao::before {
-  content: "🌸";
+  content: "💰";
 }
 
 .li-xi::before {
-  content: "🧧";
+  content: "💸";
 }
 
 @keyframes fall {
@@ -403,6 +403,7 @@ h1 {
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 
 
 
